@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, internal-scale=1.0">
+	<title>채팅</title>
+	<link href="main.css" rel="stylesheet" type="text/css" media="all"/>
+	<?php
+include './function.php';
+?>
+
+</head>
+<body>
+
+			<header id="header">
+				<a class="logo" href="index.html">OneChat</a>
+
+				</header>
+
+<div id="wrapper1">
+	<div id="first" class="container">
+		<div class="title">
+			<h2>채팅</h2>
+		</div>
+		<div class="content">
+			<h3><p>
+                <?php echo read_file('./db'); ?>
+			</p></h3>
+		</div>
+	</div>
+</div>
+<form method="post" action="system.php" id="chat_form" name="chat_form" autocomplete="off">
+	<footer id="footer">
+		<center><table border="0" style="border:none">
+			<tr>
+			<td ><input type="text" tabindex="1" id="email" placeholder="입력" class="inputtext radius1" name="사용자" value=""></td>
+			
+			<td ><input type="submit"  tabindex="2" value="전송" class="fbbutton"/></td>
+			</tr>
+			
+			
+			
+	</table></center>
+	
+	</footer>
+	</form>
+
+</body>
+</html>
